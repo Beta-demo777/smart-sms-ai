@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartsms
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  
+  flyway:
+    enabled: false
+  
+  devtools:
+    restart:
+      enabled: true
+      poll-interval: 1s
+      quiet-period: 400ms
+
+jwt:
+  secret: ${JWT_SECRET:dev-only-secret-key-change-before-production}
+
+logging:
+  level:
+    com.smartsms: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG

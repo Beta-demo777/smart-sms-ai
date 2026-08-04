@@ -1,0 +1,31 @@
+debug: false
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:smart_sms_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;NON_KEYWORDS=YEAR,KEY,VALUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+  flyway:
+    enabled: false
+
+  devtools:
+    restart:
+      enabled: false
+
+jwt:
+  secret: test-only-secret-key-change-before-production
+
+logging:
+  level:
+    root: WARN
+    com.smartsms: WARN
+    org.hibernate.SQL: WARN
+    org.springframework: WARN
+    org.springframework.boot.autoconfigure: WARN

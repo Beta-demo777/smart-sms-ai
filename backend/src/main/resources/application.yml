@@ -1,0 +1,108 @@
+spring:
+  application:
+    name: smart-sms-backend
+  
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:smart_sms}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: public
+    open-in-view: false
+  
+  flyway:
+    enabled: false
+  
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non_null
+
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /api
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:}
+  expiration: ${JWT_EXPIRATION:86400000}
+  cookie-name: jwt-token
+  cookie-max-age: 86400
+
+# Remote AI Configuration (OpenAI-compatible)
+remote-ai:
+  api-key: ${AI_API_KEY:}
+  base-url: ${AI_BASE_URL:}
+  model: ${AI_MODEL:}
+  timeout: ${AI_TIMEOUT:120000}
+  chat-path: ${AI_CHAT_PATH:/v1/chat/completions}
+
+# AI Provider Routing
+ai:
+  # remote | local (alias: ollama)
+  provider: ${AI_PROVIDER:remote}
+
+# Local AI (Ollama) Configuration
+ollama:
+  base-url: ${OLLAMA_BASE_URL:http://localhost:8000}
+  model: ${OLLAMA_MODEL:qwen/qwen3-1.7b}
+  timeout: ${OLLAMA_TIMEOUT:120000}
+  api-key: ${OLLAMA_API_KEY:}
+  chat-path: ${OLLAMA_CHAT_PATH:/v1/chat/completions}
+  completion-path: ${OLLAMA_COMPLETION_PATH:/v1/completions}
+
+# OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  show-actuator: true
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when_authorized
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.smartsms: DEBUG
+    org.springframework.security: INFO
+
+# CORS Configuration
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+  allowed-methods: GET,POST,PUT,DELETE,PATCH,OPTIONS
+  allowed-headers: "*"
+  allow-credentials: true

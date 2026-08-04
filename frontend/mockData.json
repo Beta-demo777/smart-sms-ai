@@ -1,0 +1,188 @@
+
+{
+  "students": [
+    {
+      "id": "S001",
+      "name": "张伟",
+      "age": 20,
+      "gender": "男",
+      "email": "zhang.wei@example.com",
+      "class": "计算机科学 21-1",
+      "enrollmentDate": "2021-09-01",
+      "gpa": 3.8,
+      "attendance": 98,
+      "status": "在读",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s001"
+    },
+    {
+      "id": "S002",
+      "name": "王芳",
+      "age": 19,
+      "gender": "女",
+      "email": "wang.fang@example.com",
+      "class": "软件工程 22-2",
+      "enrollmentDate": "2022-09-01",
+      "gpa": 3.9,
+      "attendance": 95,
+      "status": "在读",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s002"
+    },
+    {
+      "id": "S003",
+      "name": "李强",
+      "age": 21,
+      "gender": "男",
+      "email": "li.qiang@example.com",
+      "class": "人工智能 20-3",
+      "enrollmentDate": "2020-09-01",
+      "gpa": 3.2,
+      "attendance": 88,
+      "status": "在读",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s003"
+    },
+    {
+      "id": "S004",
+      "name": "刘洋",
+      "age": 20,
+      "gender": "女",
+      "email": "liu.yang@example.com",
+      "class": "计算机科学 21-1",
+      "enrollmentDate": "2021-09-01",
+      "gpa": 3.5,
+      "attendance": 92,
+      "status": "在读",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s004"
+    },
+    {
+      "id": "S005",
+      "name": "陈静",
+      "age": 19,
+      "gender": "女",
+      "email": "chen.jing@example.com",
+      "class": "软件工程 22-2",
+      "enrollmentDate": "2022-09-01",
+      "gpa": 4.0,
+      "attendance": 100,
+      "status": "在读",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s005"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "T001",
+      "name": "王教授",
+      "title": "教授",
+      "department": "计算机学院",
+      "email": "wang.prof@smart.edu",
+      "phone": "13800138001",
+      "status": "在职",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t1",
+      "joinDate": "2010-09-01",
+      "researchArea": "人工智能与大数据"
+    },
+    {
+      "id": "T002",
+      "name": "李博士",
+      "title": "副教授",
+      "department": "软件学院",
+      "email": "li.phd@smart.edu",
+      "phone": "13800138002",
+      "status": "在职",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t2",
+      "joinDate": "2015-06-15",
+      "researchArea": "分布式系统"
+    },
+    {
+      "id": "T003",
+      "name": "张专家",
+      "title": "讲师",
+      "department": "人工智能学院",
+      "email": "zhang.exp@smart.edu",
+      "phone": "13800138003",
+      "status": "休假",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t3",
+      "joinDate": "2018-03-01",
+      "researchArea": "机器学习"
+    },
+    {
+      "id": "T004",
+      "name": "Prof. Smith",
+      "title": "外籍教授",
+      "department": "外国语学院",
+      "email": "smith@smart.edu",
+      "phone": "13800138004",
+      "status": "在职",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t4",
+      "joinDate": "2019-09-01",
+      "researchArea": "应用语言学"
+    },
+    {
+      "id": "T005",
+      "name": "赵老师",
+      "title": "高级讲师",
+      "department": "计算机学院",
+      "email": "zhao@smart.edu",
+      "phone": "13800138005",
+      "status": "在职",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t5",
+      "joinDate": "2012-07-01",
+      "researchArea": "操作系统内核"
+    }
+  ],
+  "classes": [
+    {
+      "id": "CLS2101",
+      "name": "计算机科学 21-1",
+      "department": "计算机学院",
+      "advisor": "王教授",
+      "studentCount": 35,
+      "year": 2021,
+      "status": "active"
+    },
+    {
+      "id": "CLS2202",
+      "name": "软件工程 22-2",
+      "department": "软件学院",
+      "advisor": "李博士",
+      "studentCount": 42,
+      "year": 2022,
+      "status": "active"
+    },
+    {
+      "id": "CLS2003",
+      "name": "人工智能 20-3",
+      "department": "人工智能学院",
+      "advisor": "张专家",
+      "studentCount": 38,
+      "year": 2020,
+      "status": "active"
+    }
+  ],
+  "courses": [
+    { "id": "C001", "name": "高等数学", "teacher": "王教授", "teacherAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t1", "credits": 4, "enrolled": 120, "maxCapacity": 150, "schedule": "周一 8:00 - 10:00" },
+    { "id": "C002", "name": "数据结构", "teacher": "李博士", "teacherAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t2", "credits": 3, "enrolled": 85, "maxCapacity": 100, "schedule": "周二 14:00 - 16:00" },
+    { "id": "C003", "name": "人工智能导论", "teacher": "张专家", "teacherAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t3", "credits": 3, "enrolled": 60, "maxCapacity": 60, "schedule": "周三 10:00 - 12:00" },
+    { "id": "C004", "name": "大学英语", "teacher": "Prof. Smith", "teacherAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t4", "credits": 2, "enrolled": 150, "maxCapacity": 200, "schedule": "周四 8:00 - 10:00" },
+    { "id": "C005", "name": "操作系统", "teacher": "赵老师", "teacherAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t5", "credits": 4, "enrolled": 90, "maxCapacity": 120, "schedule": "周五 14:00 - 16:00" }
+  ],
+  "classrooms": [
+    { "id": "R101", "name": "第一阶梯教室", "capacity": 200, "type": "阶梯教室", "status": "使用中", "location": "A楼 101", "equipment": ["投影仪", "音响系统", "空调"] },
+    { "id": "R204", "name": "多媒体实验室 B", "capacity": 60, "type": "多媒体实验室", "status": "空闲", "location": "B楼 204", "equipment": ["计算机 (60台)", "投影仪", "白板"] },
+    { "id": "R305", "name": "研讨室 3", "capacity": 20, "type": "会议室", "status": "维护中", "location": "C楼 305", "equipment": ["电视屏", "白板"] },
+    { "id": "R102", "name": "普通教室 102", "capacity": 80, "type": "普通教室", "status": "空闲", "location": "A楼 102", "equipment": ["黑板", "风扇"] },
+    { "id": "R401", "name": "语音室 A", "capacity": 40, "type": "语音室", "status": "使用中", "location": "D楼 401", "equipment": ["耳机", "中控系统", "投影仪"] }
+  ],
+  "users": [
+    { "id": "A001", "name": "系统管理员", "email": "admin@smart.edu", "role": "admin", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=admin", "status": "active", "lastLogin": "2024-03-20 10:22" },
+    { "id": "T001", "name": "李教授", "email": "li.prof@smart.edu", "role": "teacher", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher", "status": "active", "lastLogin": "2024-03-19 15:45" },
+    { "id": "S001", "name": "张同学", "email": "zhang@smart.edu", "role": "student", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=student", "status": "active", "lastLogin": "2024-03-18 09:12" },
+    { "id": "T002", "name": "王博士", "email": "wang@smart.edu", "role": "teacher", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=t2", "status": "locked", "lastLogin": "2024-03-15 11:30" },
+    { "id": "S002", "name": "陈同学", "email": "chen@smart.edu", "role": "student", "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=s2", "status": "active", "lastLogin": "2024-03-20 08:00" }
+  ],
+  "activities": [
+    { "id": "1", "user": "教务处", "action": "录入新学生", "target": "陈静", "time": "10分钟前", "type": "success" },
+    { "id": "2", "user": "李博士", "action": "更新了课程", "target": "数据结构", "time": "1小时前", "type": "info" },
+    { "id": "3", "user": "系统", "action": "检测到缺勤异常", "target": "李强", "time": "3小时前", "type": "warning" },
+    { "id": "4", "user": "Admin", "action": "发布了校内通知", "target": "所有学生", "time": "昨天", "type": "info" }
+  ]
+}

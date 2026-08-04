@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/dist/
+backend/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.factorypath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+frontend/.env
+backend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docker volumes
+backend/docker/postgres-data/
+
+# Runtime uploads
+backend/uploads/
+
+# Local tooling
+.omo/
+.codegraph
+
+# Package locks
+/package-lock.json

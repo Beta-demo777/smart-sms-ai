@@ -1,0 +1,7 @@
+{
+  "name": "Smart-SMS: AI 智能学生管理系统",
+  "description": "一个功能齐全的学生管理系统，集成了仪表盘、学生列表、课程管理、成绩分析以及由通用 AI 服务驱动的学生表现分析报告功能。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
