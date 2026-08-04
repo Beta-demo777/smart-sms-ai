@@ -18,16 +18,36 @@ Smart SMS AI 是一个基于 Spring Boot 和 React 的学生智能管理系统�
 
 ## 技术栈
 
-| 层级 | 技术 |
-|------|------|
-| 后端 | Java 21, Spring Boot 3.2.1, Spring Security, Spring Data JPA |
-| 数据库 | PostgreSQL 16, H2 for tests |
-| 认证 | JWT, HTTP-only Cookie |
-| API 文档 | SpringDoc OpenAPI, Swagger UI |
-| 前端 | React 19, TypeScript, Vite |
-| UI | Tailwind CSS, Lucide React, Recharts, Framer Motion |
-| 测试与 CI | Maven, Vitest, GitHub Actions |
-| 部署 | Docker, Docker Compose |
+| 层级      | 技术                                                         |
+| --------- | ------------------------------------------------------------ |
+| 后端      | Java 21, Spring Boot 3.2.1, Spring Security, Spring Data JPA |
+| 数据库    | PostgreSQL 16, H2 for tests                                  |
+| 认证      | JWT, HTTP-only Cookie                                        |
+| API 文档  | SpringDoc OpenAPI, Swagger UI                                |
+| 前端      | React 19, TypeScript, Vite                                   |
+| UI        | Tailwind CSS, Lucide React, Recharts, Framer Motion          |
+| 测试与 CI | Maven, Vitest, GitHub Actions                                |
+| 部署      | Docker, Docker Compose                                       |
+
+## 界面预览
+
+以下截图展示了项目的核心界面，均使用演示账号登录后截取。
+
+| 登录页                                 | 数据看板                                   |
+| -------------------------------------- | ------------------------------------------ |
+| ![登录页](docs/screenshots/登录页.png) | ![数据看板](docs/screenshots/数据看板.png) |
+
+| AI分析                                 | AI对话                                 |
+| -------------------------------------- | -------------------------------------- |
+| ![AI分析](docs/screenshots/AI分析.png) | ![AI对话](docs/screenshots/AI对话.png) |
+
+| 排课管理                                   | 课程管理                                   |
+| ------------------------------------------ | ------------------------------------------ |
+| ![排课管理](docs/screenshots/排课管理.png) | ![课程管理](docs/screenshots/课程管理.png) |
+
+| 通知公告                                   | 操作日志                                   |
+| ------------------------------------------ | ------------------------------------------ |
+| ![通知公告](docs/screenshots/通知公告.png) | ![操作日志](docs/screenshots/操作日志.png) |
 
 ## 项目结构
 
@@ -77,13 +97,13 @@ docker compose -f docker-compose.dev.yml up -d
 
 开发数据库默认连接信息：
 
-| 项目 | 值 |
-|------|----|
-| Host | `localhost` |
-| Port | `5432` |
+| 项目     | 值          |
+| -------- | ----------- |
+| Host     | `localhost` |
+| Port     | `5432`      |
 | Database | `smart_sms` |
-| Username | `postgres` |
-| Password | `postgres` |
+| Username | `postgres`  |
+| Password | `postgres`  |
 
 ### 2. 启动后端
 
@@ -112,11 +132,11 @@ npm run dev
 
 开发环境启动后可使用以下演示账号登录：
 
-| 角色 | 用户名 | 密码 |
-|------|--------|------|
-| 管理员 | `admin` | `123456` |
-| 教师 | `T2024001` | `123456` |
-| 学生 | `20230001` | `123456` |
+| 角色   | 用户名     | 密码     |
+| ------ | ---------- | -------- |
+| 管理员 | `admin`    | `123456` |
+| 教师   | `T2024001` | `123456` |
+| 学生   | `20230001` | `123456` |
 
 这些账号仅用于本地演示。生产环境请重新初始化用户、修改默认密码，并设置强随机 `JWT_SECRET`。
 
@@ -146,19 +166,19 @@ export OLLAMA_MODEL=qwen/qwen3-1.7b
 
 ### AI 环境变量
 
-| 变量 | 说明 | 默认值 |
-|------|------|--------|
-| `AI_PROVIDER` | AI 提供方，支持 `remote`、`local`，并兼容 `ollama` 别名 | `remote` |
-| `AI_API_KEY` | 远程 AI API key | 空 |
-| `AI_BASE_URL` | 远程 OpenAI-compatible API 基础地址 | 空 |
-| `AI_MODEL` | 远程模型名称 | 空 |
-| `AI_TIMEOUT` | 远程 AI 请求超时时间，单位毫秒 | `120000` |
-| `AI_CHAT_PATH` | 远程聊天接口路径 | `/v1/chat/completions` |
-| `OLLAMA_BASE_URL` | 本地 OpenAI-compatible 服务地址 | `http://localhost:8000` |
-| `OLLAMA_MODEL` | 本地模型名称 | `qwen/qwen3-1.7b` |
-| `OLLAMA_API_KEY` | 本地服务 API key，可为空 | 空 |
-| `OLLAMA_CHAT_PATH` | 本地聊天接口路径 | `/v1/chat/completions` |
-| `OLLAMA_COMPLETION_PATH` | 本地补全接口路径 | `/v1/completions` |
+| 变量                     | 说明                                                    | 默认值                  |
+| ------------------------ | ------------------------------------------------------- | ----------------------- |
+| `AI_PROVIDER`            | AI 提供方，支持 `remote`、`local`，并兼容 `ollama` 别名 | `remote`                |
+| `AI_API_KEY`             | 远程 AI API key                                         | 空                      |
+| `AI_BASE_URL`            | 远程 OpenAI-compatible API 基础地址                     | 空                      |
+| `AI_MODEL`               | 远程模型名称                                            | 空                      |
+| `AI_TIMEOUT`             | 远程 AI 请求超时时间，单位毫秒                          | `120000`                |
+| `AI_CHAT_PATH`           | 远程聊天接口路径                                        | `/v1/chat/completions`  |
+| `OLLAMA_BASE_URL`        | 本地 OpenAI-compatible 服务地址                         | `http://localhost:8000` |
+| `OLLAMA_MODEL`           | 本地模型名称                                            | `qwen/qwen3-1.7b`       |
+| `OLLAMA_API_KEY`         | 本地服务 API key，可为空                                | 空                      |
+| `OLLAMA_CHAT_PATH`       | 本地聊天接口路径                                        | `/v1/chat/completions`  |
+| `OLLAMA_COMPLETION_PATH` | 本地补全接口路径                                        | `/v1/completions`       |
 
 ## 常用脚本
 
@@ -190,22 +210,22 @@ http://localhost:8080/api/swagger-ui/index.html
 
 主要 API 模块：
 
-| 模块 | 路径 | 说明 |
-|------|------|------|
-| Auth | `/api/auth/*` | 登录、登出、认证状态 |
-| Users | `/api/users/*` | 用户管理 |
-| Students | `/api/students/*` | 学生管理 |
-| Teachers | `/api/teachers/*` | 教师管理 |
-| Classes | `/api/classes/*` | 班级管理 |
-| Courses | `/api/courses/*` | 课程管理和选课 |
-| Classrooms | `/api/classrooms/*` | 教室管理 |
-| Departments | `/api/departments/*` | 院系管理 |
-| Majors | `/api/majors/*` | 专业管理 |
-| Attendance | `/api/attendance/*` | 考勤 |
-| Schedules | `/api/schedules/*` | 排课 |
-| Activities | `/api/activities/*` | 活动日志 |
-| AI | `/api/ai/*` | AI 聊天、报告和会话 |
-| AI Config | `/api/admin/ai-config/*` | 管理员 AI 配置 |
+| 模块        | 路径                     | 说明                 |
+| ----------- | ------------------------ | -------------------- |
+| Auth        | `/api/auth/*`            | 登录、登出、认证状态 |
+| Users       | `/api/users/*`           | 用户管理             |
+| Students    | `/api/students/*`        | 学生管理             |
+| Teachers    | `/api/teachers/*`        | 教师管理             |
+| Classes     | `/api/classes/*`         | 班级管理             |
+| Courses     | `/api/courses/*`         | 课程管理和选课       |
+| Classrooms  | `/api/classrooms/*`      | 教室管理             |
+| Departments | `/api/departments/*`     | 院系管理             |
+| Majors      | `/api/majors/*`          | 专业管理             |
+| Attendance  | `/api/attendance/*`      | 考勤                 |
+| Schedules   | `/api/schedules/*`       | 排课                 |
+| Activities  | `/api/activities/*`      | 活动日志             |
+| AI          | `/api/ai/*`              | AI 聊天、报告和会话  |
+| AI Config   | `/api/admin/ai-config/*` | 管理员 AI 配置       |
 
 ## 生产部署
 
