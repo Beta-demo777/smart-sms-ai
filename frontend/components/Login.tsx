@@ -109,7 +109,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             </div>
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-900 dark:text-zinc-100 leading-tight">
-                智能学生管理平台
+                学生智能管理平台
               </h1>
               <p className="mt-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-md">
                 统一管理学生、教师、课程与校园服务。使用你的学号或工号登录系统。
